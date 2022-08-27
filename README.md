@@ -13,6 +13,6 @@ Use requires a Molaris API key which is currently available with the free Molari
 
 Replace YOUR_API_KEY with the Moralis API Key.
 
-    from MoralisSDK import MoralisAPI
+    from MoralisSDK.api import MoralisAPI
     moralis = MoralisAPI()
     moralis.set_api_key("YOUR_API_KEY")
