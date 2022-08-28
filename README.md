@@ -1,6 +1,6 @@
 # MoralisSDK
 ## Introduction
-A simple Python wrapper for the Molaris REST API. Useful for getting ERC-20 token prices, getting general token information and getting information about all tokens in a wallet. 
+A simple Python sdk for the Molaris apis. 
 
 ## Molaris
 Use requires a Molaris API key which is currently available with the free Molaris service tier. 
@@ -13,6 +13,6 @@ Use requires a Molaris API key which is currently available with the free Molari
 
 Replace YOUR_API_KEY with the Moralis API Key.
 
-    from MoralisSDK.api import MoralisAPI
-    moralis = MoralisAPI()
+    from MoralisSDK import api
+    moralis = api.MoralisAPI()
     moralis.set_api_key("YOUR_API_KEY")
