@@ -8,7 +8,9 @@ Use requires a Molaris API key which is currently available with the free Molari
 - https://deep-index.moralis.io/api-docs/#/
 - https://docs.moralis.io/moralis-server/web3-sdk/moralis-web3-api-rest
 
-# Usage
+# Install
+
+    ** pip install MoralisSDK==1.0.1
 ## Setup
 
 Replace YOUR_API_KEY with the Moralis API Key.
