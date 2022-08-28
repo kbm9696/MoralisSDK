@@ -510,7 +510,7 @@ class MoralisApi:
             if type(token_id) == str and len(token_id):
                 if type(address) == str and len(address):
                     if type(token_format) == str:
-                        endpoint = f'nft/{address}/{token_id}/owners?format={token_format}'
+                        endpoint = f'nft/{address}/{token_id}/transfers?format={token_format}'
                     else:
                         print('token format type error')
                 else:
@@ -546,3 +546,37 @@ class MoralisApi:
 
         response = self.api_request(endpoint)
         return response
+    
+    def ipfs_uploadFolder(self,data):
+        endpoint = 'ipfs/uploadFolder'
+        headers_to_add = {"Content-Type": "application/json",
+                "accept": "application/json"}
+        resp = self.api_request(endpoint,method='POST',data=data,headers_to_add=headers_to_add)
+        return resp
+
+    def get_native_balance(self, wallet_address, chain):
+        endpoint = wallet_address + "/balance?chain=" + chain
+        response = self.api_request(endpoint)
+        return float(response['balance'])
+
+    def get_tokens_for_wallet(self, wallet_address, chain):
+        endpoint = wallet_address + "/erc20?chain=" + chain
+        return self.api_request(endpoint)
+
+    def get_token_price(self, token_address, chain):
+        endpoint = 'erc20/' + token_address + "/price?chain=" + chain
+        return self.api_request(endpoint)
+
+    def convert_native_amount_to_token_amount(self, token_address, chain, native_price_amount):
+        price_api_response = self.get_token_price(token_address, chain)
+        native_price = float(price_api_response['nativePrice']['value']) * (
+                    10 ** float(-price_api_response['nativePrice']['decimals']))
+        native_amount = (1 / native_price) * native_price_amount
+        return native_amount
+
+    def convert_token_amount_to_native_amount(self, token_address, chain, token_amount):
+        price_api_response = self.get_token_price(token_address, chain)
+        native_price = float(price_api_response['nativePrice']['value']) * (
+                    10 ** float(-price_api_response['nativePrice']['decimals']))
+        token_amount = (native_price) * token_amount
+        return token_amount

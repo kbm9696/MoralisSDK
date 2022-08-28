@@ -1,6 +1,6 @@
 # MoralisSDK
 ## Introduction
-A simple Python sdk for the Molaris apis. 
+A simple Python sdk for the Molaris NFT apis. 
 
 ## Molaris
 Use requires a Molaris API key which is currently available with the free Molaris service tier. 
@@ -14,5 +14,65 @@ Use requires a Molaris API key which is currently available with the free Molari
 Replace YOUR_API_KEY with the Moralis API Key.
 
     from MoralisSDK import api
-    moralis = api.MoralisAPI()
+    moralis = api.MoralisApi()
     moralis.set_api_key("YOUR_API_KEY")
+
+
+Get_nfts [Account] (Function shows manditory params, play around with optional also).
+
+    moralis.get_nfts(address='0x1d62df39f4D20119EcEEf66bFEE23c0afe49CeB8', chain='eth')
+
+Get_transfers [Account].
+
+    moralis.get_nfts_transfer(address='0x1d62df39f4D20119EcEEf66bFEE23c0afe49CeB8', chain='eth')
+
+Get_nft_for_contract [Account].
+
+    moralis.get_nfts_token(address='0x73E9f114536C6807B6d9388bBf76f5404c621a77', chain='eth', token_address='0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258')
+
+Get_nft_trade [Token].
+
+    moralis.get_nfts_trades(address='0x73E9f114536C6807B6d9388bBf76f5404c621a77', chain='eth')
+
+Get_nft_lowest_price [Token].
+
+    moralis.get_nft_lowest_price(address='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d', chain='eth')
+
+Get_nft_transfer_from_blocks [Token].
+
+    moralis.get_nfts_transfer_blocks(from_block='***')
+
+Get_tokenids [Token].
+
+    moralis.get_token_id(address='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d')
+
+Get_nft_owners [Token].
+
+    moralis.get_nft_owners(address='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d')
+
+Get_nft_contract_transfer [Token].
+
+    moralis.get_contract_nft_transfers(address='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d')
+
+Get_nft_collection_metadata [Token].
+
+    moralis.get_nft_metadata(address='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d')
+
+Check_nft_metadata_sync [Token].
+
+    moralis.get_nft_metadata_resync(address='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d', token_id='1000')
+
+Get_nft_token_metadata [Token].
+
+    moralis.get_token_id_metadata(address='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d', token_id='1000')
+
+Get_nft_token_owner [Token].
+
+    moralis.get_token_id_owners(address='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d', token_id='1000')
+
+Get_nft_transfer [Token].
+
+    moralis.get_token_id_transfers(address='0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d', token_id='1000')
+    
+
+
