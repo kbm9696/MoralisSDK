@@ -1,6 +1,6 @@
 # MoralisSDK
 ## Introduction
-A simple Python sdk for the Molaris Native, Account and Token apis ['yet to add more']. It helps by calling simple function to get the data that really helpful for data analytics. 
+A simple Python sdk for the Moralis Native, Account and Token apis. It helps by calling simple function to get the data that really helpful for data analytics. 
 
 ## Moralis
 Use requires a Molaris API key which is currently available with the free Molaris service tier. 
