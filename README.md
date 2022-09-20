@@ -148,27 +148,39 @@ Replace YOUR_API_KEY with the Moralis API Key.
     moralis = chainlink.Chainlink()
 
 ## Available functions to get Chainlink analytics data
-offset -> page
-limit -> data points limit
-sortby -> asc, desc
+
+offset -> page , limit -> data points limit, sortby -> [asc, desc]
 
 1.active_feeds(offset,limit)
+
 2.Active_Feeds_Requesters(limit, sortby)
+
 3.Keepers_BSC_Daily(limit, sortby)
+
 4.Keepers_ETH_Daily(limit, sortby)
+
 5.Keepers_POLYGON_Daily(limit, sortby)
+
 6.Oracle_Requests_over_Time(limit, sortby)
+
 7.Total_LINK_on_centralized_exchanges(limit, sortby)
+
 8.chainlink_VRF_v1_daily_BSC(limit, sortby)
+
 9.chainlink_VRF_v1_daily_ETH(limit, sortby)
+
 10.chainlink_VRF_v1_daily_POLYGON(limit, sortby)
+
 11.chainlink_VRF_v2_daily_BSC(limit, sortby)
+
 12.chainlink_VRF_v2_daily_ETH(limit, sortby)
+
 13.chainlink_VRF_v2_daily_POLYGON(limit, sortby)
 
 
 
-##End Notes
+## End Notes
+
 MoralisSdk that capable to help the data analyst or data scientiest who works on web3 analytics.Just make the flow very easy for them to develop the projects.
 
 MoralisSDK still ongoing with the development to add more web3 protocols data's with the help of Moralis.
