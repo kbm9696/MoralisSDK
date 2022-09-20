@@ -2,10 +2,15 @@
 ## Problem
 1. Data analytics and Data related projects for web3 protocols increasing day by day but lack of sdk//wrapper//easy to use apis available for web3 protocols in python language.
 
-2. No easy to use tools on python for NFTStorage // web3storage // pinata.
+2. No easy to use tools on python for NFTStorage // web3storage // pinata // MoralisIPFS.
 
 ## Solution
-  ***MORALISSDK**
+  ***MoralisSDK**
+  MoralisSdk is a DATA DEVELOPER TOOLING
+
+1. It provide a easy to integrate methods to get the web3 protocols data very quickly with the help of Moralis.
+2. Simple function's for NFTSTORAGE,WEB3STORAGE,PINATA upload and download options in python.
+3. It provide chainlink analytics data via simple function call with the help of Moralis.
 
 ## Introduction
 A simple Python sdk that foucus on moralis apis,IPFS(NFTSTORAGE,WEB3STORAGE,PINATA,MORALIS_IPFS)and chainlink analytics data with the help of moralis. Just simple function call to get the data that used for data analytics and data projects. 
@@ -138,17 +143,28 @@ Replace YOUR_API_KEY with the Moralis API Key.
     moralis = chainlink.Chainlink()
 
 ## Available functions to get Chainlink analytics data
+offset -> page
+limit -> data points limit
+sortby -> asc, desc
 
 1.active_feeds(offset,limit)
-2.Active_Feeds_Requesters(limit)
-3.Keepers_BSC_Daily(limit)
-4.Keepers_ETH_Daily(limit)
-5.Keepers_POLYGON_Daily(limit)
-6.Oracle_Requests_over_Time(limit)
-7.Total_LINK_on_centralized_exchanges(limit)
-8.chainlink_VRF_v1_daily_BSC(limit)
-9.chainlink_VRF_v1_daily_ETH(limit)
-10.chainlink_VRF_v1_daily_POLYGON(limit)
-11.chainlink_VRF_v2_daily_BSC(limit)
-12.chainlink_VRF_v2_daily_ETH(limit)
-13.chainlink_VRF_v2_daily_POLYGON(limit)
+2.Active_Feeds_Requesters(limit, sortby)
+3.Keepers_BSC_Daily(limit, sortby)
+4.Keepers_ETH_Daily(limit, sortby)
+5.Keepers_POLYGON_Daily(limit, sortby)
+6.Oracle_Requests_over_Time(limit, sortby)
+7.Total_LINK_on_centralized_exchanges(limit, sortby)
+8.chainlink_VRF_v1_daily_BSC(limit, sortby)
+9.chainlink_VRF_v1_daily_ETH(limit, sortby)
+10.chainlink_VRF_v1_daily_POLYGON(limit, sortby)
+11.chainlink_VRF_v2_daily_BSC(limit, sortby)
+12.chainlink_VRF_v2_daily_ETH(limit, sortby)
+13.chainlink_VRF_v2_daily_POLYGON(limit, sortby)
+
+
+
+##End Notes
+MoralisSdk that capable to help the data analyst or data scientiest who works on web3 analytics.Just make the flow very easy for them to develop the projects.
+
+MoralisSDK still ongoing with the development to add more web3 protocols data's with the help of Moralis.
+
