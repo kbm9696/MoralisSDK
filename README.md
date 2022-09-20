@@ -1,9 +1,7 @@
-# MoralisSDK
-
 <br />
 <div align="center">
     <a href="https://postimg.cc/N2ff3Q88"><img src="https://i.postimg.cc/Xq9GyJpP/M.gif" alt="Add-a-heading" border="0" width="200" height="200"></a>
-  <h3 align="center">ZORA API DASH</h3>
+  <h3 align="center">MoralisSDK</h3>
  
 </div>
 ## Problem
